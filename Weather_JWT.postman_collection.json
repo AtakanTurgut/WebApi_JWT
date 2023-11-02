@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "5db2eadf-b1db-4360-9627-606553ebd76d",
+		"name": "Weather_JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27907837",
+		"_collection_link": "https://solar-firefly-811735.postman.co/workspace/ASP.NET-Core-Web-API~9ce5536b-0785-414d-ab97-5f2f9d772300/collection/27907837-5db2eadf-b1db-4360-9627-606553ebd76d?action=share&source=collection_link&creator=27907837"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//  Admin\r\n\r\n{\r\n    \"UserName\": \"AtakanTurgut\",\r\n    \"Password\": \"123456\"\r\n}\r\n\r\n// Support\r\n/*\r\n{\r\n    \"UserName\": \"FurkanUvenc\",\r\n    \"Password\": \"123456\"\r\n}\r\n*/\r\n// User\r\n/*\r\n{\r\n    \"UserName\": \"YagmurSoydan\",\r\n    \"Password\": \"123456\"\r\n}\r\n*/",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkF0YWthblR1cmd1dCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjk4OTUwMjI0LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDI5LyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMjkvIn0.214fg1zuVnVjKZ2J9raRokj6UHy3eprlxV80zLI_1Tw",
+						"type": "text",
+						"description": "login -> body -> post -> Bearer + ' ' + jwt"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7029/WeatherForecast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
