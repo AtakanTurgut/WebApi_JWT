@@ -15,11 +15,11 @@ namespace WebApi_JWT.Controllers
     [Route("api/auth")]
     [ApiController]
     [Authorize]
-    public class AuthenticationController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly JwtSettings _jwtSettings;
 
-        public AuthenticationController(IOptions<JwtSettings> jwtSettings)
+        public AuthController(IOptions<JwtSettings> jwtSettings)
         {
             _jwtSettings = jwtSettings.Value;
         }
